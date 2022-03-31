@@ -1,0 +1,61 @@
+@use "base/variables" as *;
+@use "base/mixin" as *;
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  &--active {
+    color: #{$primary};
+  }
+}
+
+.wrapper {
+  position: relative;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: $medium;
+  @include truncate;
+  @include responsive(mobile) {
+    font-size: 14px;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #{$secondary};
+  font-size: 20px;
+  font-weight: $bold;
+  margin-bottom: 30px;
+  transition-duration: 0.2s;
+  cursor: pointer;
+  &:hover {
+    color: #{$black};
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+  @include responsive(mobile) {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+}
+
+.icon-wrapper {
+  @include center;
+  width: 38px;
+  height: 28px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #{$background} 0%, #{$white} 100%);
+  box-shadow: inset 0px 2px 4px rgba(91, 120, 155, 0.1);
+  &--active {
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1),
+      inset 0px 2px 4px rgba(91, 120, 155, 0.1);
+    color: #{$primary};
+  }
+}

@@ -1,0 +1,49 @@
+@use "base/variables" as *;
+@use "base/mixin" as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #{$secondary};
+  @include responsive(laptop) {
+    justify-content: center;
+  }
+  @include responsive(mobile) {
+    font-size: 12px;
+    gap: 10px;
+  }
+}
+
+.download {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  font-size: 34px;
+  font-weight: $medium;
+  color: #{$secondary};
+  @include responsive(tablet) {
+    align-items: center;
+    text-align: center;
+    font-size: 24px;
+  }
+}
+
+.wrapper {
+  display: flex;
+  column-gap: 30px;
+}
+
+.image {
+  width: 140px;
+}

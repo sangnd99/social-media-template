@@ -1,0 +1,16 @@
+@use "base/variables" as *;
+@use "base/mixin" as *;
+
+.container {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  max-width: $container;
+  @include responsive(desktop) {
+    padding: 0 20px;
+    max-width: $laptop;
+  }
+  @include responsive(mobile) {
+    padding: 0 15px;
+  }
+}

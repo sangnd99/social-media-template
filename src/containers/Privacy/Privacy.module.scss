@@ -1,0 +1,49 @@
+@use "base/variables" as *;
+@use "base/mixin" as *;
+
+.container {
+  display: grid;
+  row-gap: 50px;
+}
+
+.section {
+  display: grid;
+  gap: 20px;
+  font-weight: $bold;
+  & span {
+    font-size: 18px;
+    line-height: 1;
+    font-size: 18px;
+    @include responsive(mobile) {
+      font-size: 16px;
+    }
+  }
+  & h2 {
+    font-size: 48px;
+    color: #{$primary};
+    line-height: 1;
+    @include responsive(mobile) {
+      font-size: 24px;
+    }
+  }
+  & p {
+    font-weight: $normal;
+    line-height: 1.6;
+    text-align: justify;
+    @include responsive(mobile) {
+      font-size: 14px;
+    }
+  }
+  & ul {
+    font-weight: $normal;
+    list-style: inside;
+    list-style-position: outside;
+    padding-left: 20px;
+    @include responsive(mobile) {
+      font-size: 14px;
+    }
+    & li {
+      margin-bottom: 10px;
+    }
+  }
+}

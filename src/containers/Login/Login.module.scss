@@ -1,0 +1,31 @@
+@use "base/variables" as *;
+@use "base/mixin" as *;
+
+.container {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-left: auto;
+  @include responsive(laptop) {
+    margin-left: 0;
+  }
+  @include responsive(mobile) {
+    width: 100%;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.link {
+  font-size: 18px;
+  color: #{$primary};
+  @include responsive(mobile) {
+    font-size: 14px;
+  }
+}

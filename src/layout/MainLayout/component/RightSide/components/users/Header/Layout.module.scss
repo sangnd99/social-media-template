@@ -1,0 +1,12 @@
+@use "base/variables" as *;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.edit-detail {
+  font-size: 14px;
+  color: #{$primary};
+  height: max-content;
+}

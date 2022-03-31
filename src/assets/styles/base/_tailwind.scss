@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .container {
+    @apply max-w-laptop desktop:max-w-container w-full px-1 phone:px-2 desktop:px-0 mx-auto;
+  }
+}

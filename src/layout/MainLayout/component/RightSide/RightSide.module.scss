@@ -1,0 +1,45 @@
+@use "base/variables" as *;
+@use "base/mixin" as *;
+
+$right-side-width: 340px;
+
+.container {
+  width: $right-side-width;
+  @include responsive(laptop) {
+    display: none;
+  }
+}
+
+.section {
+  width: $right-side-width;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  position: fixed;
+  top: 0;
+  padding-top: 20px;
+}
+
+.create {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 10px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  transition-duration: 0.2s;
+  width: max-content;
+  &:hover {
+    color: #{$primary};
+  }
+  &__icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    border-radius: 50%;
+    background: #{$white};
+    @include center;
+  }
+}

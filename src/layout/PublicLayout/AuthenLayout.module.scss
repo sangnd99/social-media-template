@@ -1,0 +1,49 @@
+@use "base/variables" as *;
+@use "base/mixin" as *;
+
+.wrapper {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  row-gap: 20px;
+  height: 100vh;
+  width: 100vw;
+  background: #{$background};
+}
+
+.container {
+  @include responsive(laptop) {
+    @include center;
+  }
+}
+
+.grid {
+  display: grid;
+  place-items: center;
+  @include gridCols(2);
+  @include responsive(laptop) {
+    @include gridCols(1);
+  }
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  @include responsive(laptop) {
+    display: none;
+  }
+}
+
+.title {
+  font-size: 58px;
+  font-weight: $bold;
+  line-height: 1.25;
+  background: linear-gradient(267.43deg, #{$primary} 18.32%, #{$orange} 98.31%);
+  background-clip: text;
+  color: transparent;
+}
+
+.text {
+  margin: 30px 0;
+  font-size: 24px;
+  color: #{$gray};
+}

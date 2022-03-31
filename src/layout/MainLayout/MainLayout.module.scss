@@ -1,0 +1,31 @@
+@use "base/variables" as *;
+@use "base/mixin" as *;
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/images/background.jpg");
+  background-color: #{$background};
+  overflow-y: auto;
+  background-size: cover;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  @include responsive(laptop) {
+    justify-content: center;
+  }
+}
+
+.section {
+  width: 550px;
+  height: 100%;
+  padding-top: 20px;
+  @include responsive(laptop) {
+    padding-top: 55px;
+  }
+  @include responsive(mobile) {
+    width: 100%;
+  }
+}

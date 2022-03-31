@@ -1,0 +1,55 @@
+:root {
+  --primary: #4ebe99;
+  --primary-light: #4bbd99;
+  --primary-extra-light: #22f3ae;
+  --secondary: "#97B5BF";
+  --secondary-light: "#A5BBC2";
+  --background: "#F9FDFE";
+  --black: "#3A3C3D";
+  --white: "#FFFFFF";
+  --white-dark: "#F4FBFC";
+  --gray: "#757575";
+  --gray-light: "#E6ECEE";
+  --orange: "#FBAD18";
+  --danger: "#E40F0A";
+  --border: "#ECEBEB";
+  --hover: rgba(151, 181, 191, 0.2);
+}
+
+/* @media (prefers-color-scheme: dark) { */
+/*   :root { */
+/*     --primary: #4ebe99; */
+/*     --primary-light: #4bbd99; */
+/*     --primary-extra-light: #22f3ae; */
+/*     --secondary: "#97B5BF"; */
+/*     --secondary-light: "#A5BBC2"; */
+/*     --background: "#F9FDFE"; */
+/*     --black: "#3A3C3D"; */
+/*     --white: "#FFFFFF"; */
+/*     --white-dark: "#F4FBFC"; */
+/*     --gray: "#757575"; */
+/*     --gray-light: "#E6ECEE"; */
+/*     --orange: "#FBAD18"; */
+/*     --danger: "#E40F0A"; */
+/*     --border: "#ECEBEB"; */
+/*     --hover: rgba(151, 181, 191, 0.2); */
+/*   } */
+/* } */
+/**/
+[data-theme="dark"] {
+  --primary: #4ebe99;
+  --primary-light: #4bbd99;
+  --primary-extra-light: #22f3ae;
+  --secondary: "#97B5BF";
+  --secondary-light: "#A5BBC2";
+  --background: "#F9FDFE";
+  --black: "#3A3C3D";
+  --white: "#FFFFFF";
+  --white-dark: "#F4FBFC";
+  --gray: "#757575";
+  --gray-light: "#E6ECEE";
+  --orange: "#FBAD18";
+  --danger: "#E40F0A";
+  --border: "#ECEBEB";
+  --hover: rgba(151, 181, 191, 0.2);
+}

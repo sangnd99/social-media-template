@@ -1,0 +1,121 @@
+@use "base/variables" as *;
+@use "base/mixin" as *;
+
+.container {
+  background: #{$white};
+  border-radius: 15px;
+  overflow: hidden;
+  height: 400px;
+  @include responsive(mobile) {
+    height: 350px;
+  }
+}
+
+.wrapper {
+  position: relative;
+  height: 50%;
+}
+
+.cover-photo,
+.avatar {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.user {
+  position: absolute;
+  right: 50%;
+  bottom: -50%;
+  transform: translateX(50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+  padding: 0 10px;
+}
+
+.avatar-wrapper {
+  width: 100px;
+  height: 100px;
+  min-width: 100px;
+  min-height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.name,
+.description {
+  text-align: center;
+  font-weight: $medium;
+  @include truncate;
+  width: 100%;
+}
+
+.name {
+  font-size: 18px;
+  @include responsive(mobile) {
+    font-size: 16px;
+  }
+}
+
+.description {
+  font-size: 16px;
+  color: #{$secondary};
+  @include responsive(mobile) {
+    font-size: 14px;
+  }
+}
+
+.action {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  row-gap: 10px;
+  padding: 0 30px 15px 30px;
+  @include responsive(mobile) {
+    padding: 0 20px 15px 20px;
+  }
+}
+
+.follow {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  color: #{$secondary};
+  @include responsive(mobile) {
+    font-size: 14px;
+  }
+}
+
+.ammount {
+  font-weight: $bold;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  @include responsive(mobile) {
+    display: none;
+  }
+}
+
+.button {
+  background: linear-gradient(180deg, #{$white-dark} 0%, #{$white} 100%);
+  padding: 5px 20px;
+  border-radius: 9px;
+  box-shadow: inset 0px 2px 4px rgba(91, 120, 155, 0.1);
+  color: #{$secondary};
+  &:hover {
+    filter: brightness(0.9);
+    transition-duration: 0.2s;
+  }
+  &--active {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+      inset 1px 1px 2px rgba(91, 120, 155, 0.05);
+    font-weight: $bold;
+    color: #{$primary};
+  }
+}

@@ -1,0 +1,48 @@
+@use "base/variables" as *;
+@use "base/mixin" as *;
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  place-items: center;
+  padding: 18px 25px;
+  border-radius: 7px;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  background: linear-gradient(
+    269.87deg,
+    #{$white} 50.53%,
+    #{$white-dark} 96.91%
+  );
+  @include responsive(mobile) {
+    padding: 18px 15px;
+  }
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.placeholder,
+.value {
+  font-size: 18px;
+  @include truncate;
+  @include responsive(mobile) {
+    font-size: 14px;
+  }
+}
+
+.placeholder {
+  color: #{$secondary};
+}
+
+.icon {
+  min-width: 10px;
+  min-height: 10px;
+  transform: rotate(0);
+  transition-duration: 0.2s;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}

@@ -1,0 +1,38 @@
+@use "base/variables" as *;
+@use "base/mixin" as *;
+
+.container {
+  background: #{$white};
+  border-radius: 18px;
+  padding: 25px 15px;
+}
+
+/* children of layout */
+.scrollable {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  border-radius: 15px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: $semibold;
+  margin-bottom: 20px;
+  line-height: 1;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}

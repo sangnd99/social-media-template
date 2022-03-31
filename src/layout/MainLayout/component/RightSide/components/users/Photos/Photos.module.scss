@@ -1,0 +1,12 @@
+@use "base/mixin" as *;
+
+.container {
+  display: grid;
+  gap: 5px;
+  width: 100%;
+  @include gridCols(2);
+}
+
+.image {
+  width: 100%;
+}

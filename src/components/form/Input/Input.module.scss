@@ -1,0 +1,49 @@
+@use "base/variables" as *;
+@use "base/mixin" as *;
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  width: 100%;
+  height: min-content;
+  border-radius: 7px;
+  place-items: center;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.05);
+  background: linear-gradient(
+    269.87deg,
+    #{$white} 50.53%,
+    #{$white-dark} 96.91%
+  );
+}
+
+.input {
+  width: 100%;
+  padding: 18px 25px;
+  background: transparent;
+  font-size: 18px;
+  &:focus {
+    outline: none;
+  }
+  &::placeholder {
+    font-size: 18px;
+    color: #{$secondary};
+  }
+  @include responsive(mobile) {
+    font-size: 14px;
+    padding: 18px 15px;
+    &::placeholder {
+      font-size: 14px;
+    }
+  }
+}
+
+.icon {
+  margin-right: 25px;
+  @include responsive(mobile) {
+    margin-right: 15px;
+  }
+}
+
+.pointer {
+  cursor: pointer;
+}

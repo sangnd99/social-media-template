@@ -1,0 +1,41 @@
+@use "base/variables" as *;
+@use "base/mixin" as *;
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  cursor: pointer;
+  &:hover {
+    .name {
+      color: #{$primary};
+    }
+  }
+}
+
+.info {
+  display: grid;
+  row-gap: 5px;
+}
+
+.text {
+  color: #{$secondary};
+  font-size: 14px;
+}
+
+.name {
+  font-size: 16px;
+  font-weight: $semibold;
+  transition-duration: 0.2s;
+}
+
+.more {
+  @include center;
+  min-width: 30px;
+  min-height: 30px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  &:hover {
+    @include hoverShadow;
+  }
+}

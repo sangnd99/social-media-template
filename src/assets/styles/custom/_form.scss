@@ -1,0 +1,7 @@
+@use "base/variables" as *;
+
+.form-error-text {
+  font-size: 14px;
+  color: #{$danger};
+  margin-top: 10px;
+}

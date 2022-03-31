@@ -1,0 +1,24 @@
+@use "base/variables" as *;
+@use "base/mixin" as *;
+
+.container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  background: #{$white};
+  padding: 10px;
+  border-radius: 28px;
+  place-items: center;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.input {
+  padding: 0 10px;
+  width: 100%;
+  font-size: 14px;
+  &::placeholder {
+    color: #{$secondary-light};
+  }
+  &:focus {
+    outline: none;
+  }
+}

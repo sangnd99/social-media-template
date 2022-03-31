@@ -1,0 +1,16 @@
+@use "base/variables" as *;
+@use "base/mixin" as *;
+
+.container {
+  position: fixed;
+  top: 50px;
+  right: 20px;
+  background: #{$white};
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  z-index: 9999;
+  padding: 10px 15px;
+  border-radius: 5px;
+  @include responsive(mobile) {
+    right: 10px;
+  }
+}

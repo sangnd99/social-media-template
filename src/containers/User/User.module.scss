@@ -1,0 +1,11 @@
+@use "base/variables" as *;
+@use "base/mixin" as *;
+
+.container {
+  display: grid;
+  gap: 30px;
+  margin-bottom: 20px;
+  @include responsive(mobile) {
+    gap: 15px;
+  }
+}

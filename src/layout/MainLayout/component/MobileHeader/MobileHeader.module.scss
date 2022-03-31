@@ -1,0 +1,27 @@
+@use "base/variables" as *;
+@use "base/mixin" as *;
+
+.container {
+  display: none;
+  @include responsive(laptop) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #{$white};
+    z-index: 9999;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    height: 50px;
+    border-bottom: 1px solid #{$gray-light};
+  }
+}
+
+.hamburger {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}

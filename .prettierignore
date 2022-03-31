@@ -1,0 +1,51 @@
+## same as in .gitignore
+/.next
+_next
+/_next
+/build
+/node_modules
+/dist
+/.vscode
+
+## extensions
+*.*
+Dockerfile
+LICENSE
+!*.scss
+!*.graphql
+!*.js
+!*.json
+!*.md
+!*.ts
+!*.tsx
+!*.yml
+!*.xml
+!*.storybook
+
+## same as in .gitignore
+/build
+/node_modules
+/dist
+
+# dependencies
+/node_modules
+/debug.log
+/.pnp
+.pnp.js
+/yarn.lock
+/package-lock.json
+
+# testing
+/coverage
+
+# misc
+.DS_Store
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
